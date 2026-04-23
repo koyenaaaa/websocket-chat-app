@@ -1,18 +1,67 @@
-# WebSocket Chat Application
+# 💬 WebSocket Chat Application
 
-Real-time chat app using Spring Boot and React.
+A real-time chat application built using Spring Boot (Backend) and React (Frontend) with WebSocket communication.
 
-## Run Backend
+---
+
+## 📌 Project Overview
+This application allows users to send and receive messages instantly without refreshing the page.
+
+---
+
+## 🚀 Features
+- Real-time messaging  
+- Username-based chat  
+- Instant message broadcast  
+- Enhanced user interface  
+
+---
+
+## 🛠️ Tech Stack
+
+Frontend:
+- React (Vite)
+- SockJS
+- STOMP.js  
+
+Backend:
+- Spring Boot
+- WebSocket
+- Maven  
+
+---
+
+## ⚙️ How to Run
+
+### Run Backend (Port 8080)
 mvn spring-boot:run
 
-## Run Frontend
-cd my-react-app
-npm install
-npm run dev
+### Run Frontend (Port 5173)
+cd my-react-app  
+npm install  
+npm run dev  
 
-## Output
-Users can send and receive messages in real time.
+---
 
-![Web chat interface showing a conversation list and message entry field in a desktop browser layout](image1.png)
-![Chat output screen showing a messaging thread with Koyena ghosh saying hello and Chandigarh University saying HEY student in a light themed interface](image.png)
-![Backend Terminal Showing BUILD SUCCESS](image2.png)
+## 🔌 WebSocket Endpoints
+- /ws → Connection  
+- /topic/messages → Receive messages  
+- /app/chat → Send messages  
+
+---
+
+## 📸 Output
+
+### Chat UI
+![Chat UI](image1.png)
+
+### Message Exchange
+![Message Exchange](image2.png)
+
+### Build Success
+![Build Success](image.png)
+
+---
+
+## 📌 Author
+Koyena
