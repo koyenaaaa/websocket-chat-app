@@ -42,17 +42,33 @@ export default function Chat() {
   };
 
   return (
-    <div style={{ width: "400px", margin: "auto" }}>
+    <div style={{
+      width: "400px",
+      margin: "40px auto",
+      padding: "20px",
+      borderRadius: "10px",
+      background: "#f0f0f0",
+      boxShadow: "0 0 10px rgba(0,0,0,0.2)"
+    }}>
+      <h2 style={{ textAlign: "center" }}>💬 Chat App</h2>
+
       <input
-        placeholder="Enter name"
+        placeholder="Enter username"
         onChange={(e) => setUsername(e.target.value)}
-        style={{ width: "100%", marginBottom: "10px" }}
+        style={{ width: "100%", marginBottom: "10px", padding: "8px" }}
       />
 
-      <div style={{ border: "1px solid #ccc", height: "200px", overflow: "auto", marginBottom: "10px" }}>
+      <div style={{
+        height: "200px",
+        overflowY: "auto",
+        border: "1px solid #ccc",
+        padding: "10px",
+        marginBottom: "10px",
+        background: "white"
+      }}>
         {messages.map((m, i) => (
-          <div key={i}>
-            <b>{m.sender}:</b> {m.content}
+          <div key={i} style={{ marginBottom: "5px" }}>
+            <b>{m.sender}</b>: {m.content}
           </div>
         ))}
       </div>
@@ -60,10 +76,24 @@ export default function Chat() {
       <input
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Type message"
-        style={{ width: "70%" }}
+        placeholder="Type message..."
+        style={{ width: "70%", padding: "8px" }}
       />
-      <button onClick={sendMessage}>Send</button>
+
+      <button
+        onClick={sendMessage}
+        style={{
+          width: "25%",
+          marginLeft: "5%",
+          padding: "8px",
+          background: "#4CAF50",
+          color: "white",
+          border: "none",
+          cursor: "pointer"
+        }}
+      >
+        Send
+      </button>
     </div>
   );
 }
